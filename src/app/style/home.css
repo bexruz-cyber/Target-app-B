@@ -15,7 +15,7 @@ body {
 .container {
   max-width: 600px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 /* Add this to your existing CSS file */
@@ -41,7 +41,7 @@ body {
   /* Desktop Header */
   .main-text {
     max-width: 500px;
-    margin: 30px auto;
+    margin: 0px auto;
   }
 
   .main-text-span2 {
@@ -207,10 +207,11 @@ p {
   background-color: #0a0a0a;
   border: 2px solid #b30000;
   border-radius: 30px;
-  padding: 14px 20px;
+  padding: 10px 20px;
   text-align: center;
-  margin: 20px auto;
+  margin: 0px auto;
   max-width: 85%;
+  margin-top: 15px;
 }
 
 .main-text-span2 {
@@ -231,7 +232,7 @@ p {
 
 /* Main Heading */
 .main-text-h1 {
-  margin: 25px 0;
+  margin: 15px 0;
 }
 
 .main-text-h1 h1 {
@@ -249,7 +250,7 @@ p {
   background-size: cover;
   display: flex;
   justify-content: center;
-  margin: 30px 0;
+  margin: 20px 0;
   position: relative;
 }
 
@@ -284,21 +285,28 @@ p {
 /* Registration Button */
 .show-button,
 .img-button {
-  background-color: #b30000;
-  color: white;
-  font-weight: 700;
-  font-size: 18px;
-  border: none;
-  border-radius: 30px;
-  padding: 28px 0;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  width: 85%;
-  display: block;
-  margin: 20px auto;
-  text-align: center;
+    background-color: #b30000;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    padding: 28px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 85%;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0 8px #8b0000; /* Creates the 3D effect */
+}
+
+.show-button:active,
+.img-button:active {
+    box-shadow: 0 4px #8b0000; /* Reduces shadow on click */
+    transform: translateY(4px); /* Moves button down slightly */
 }
 
 .show-button:hover,
@@ -520,7 +528,7 @@ p {
 
 #country {
   flex: 1;
-  max-width: 170px;
+  max-width: 80px;
   padding: 12px;
   padding-left: 0;
   margin-right: 8px;

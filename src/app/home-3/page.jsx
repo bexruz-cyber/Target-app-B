@@ -2,11 +2,13 @@
 
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
-import MainDostonjon from "../../../public/img/main-davronbek.png"; // Updated image name to match
+import MainDostonjon from "../../../public/img/main-davronbek-2.png"; // Updated image name to match
 import arrow from "../../../public/img/arrow.png"; // Ensure this path is correct
 import "../style/home-3.css"; // Ensure this path is correct
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   const [selectedCountry, setSelectedCountry] = useState("UZ");
   const [loading, setLoading] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -320,6 +322,7 @@ export default function Home() {
 
       setFormSubmitted(true);
       sessionStorage.setItem("reloadAfterThankYou", "true");
+      router.push("/thank-you");
     } catch (error) {
       setError(
         "❌ Ma'lumotlarni yuborishda xatolik yuz berdi. Iltimos, qayta urinib ko'ring."
@@ -385,8 +388,8 @@ export default function Home() {
               <Image
                 src={MainDostonjon}
                 alt="Dostonjon Soyibov"
-                width={400}
-                height={420}
+                width={380}
+                height={400}
                 priority={true}
               />
               <div className="speaker-badge">
@@ -468,7 +471,7 @@ export default function Home() {
                 </svg>
               </div>
               <div className="feature-text">
-              Sotuvlarni 5X oshirishning qiyin bo‘lmagan yo‘llari.
+                Sotuvlarni 5X oshirishning qiyin bo‘lmagan yo‘llari.
               </div>
             </div>
 
@@ -502,7 +505,8 @@ export default function Home() {
                 </svg>
               </div>
               <div className="feature-text">
-              Sotuvlarni oshirish uchun qanday qilib to‘g‘ri marketing kanallarini tanlash
+                Sotuvlarni oshirish uchun qanday qilib to‘g‘ri marketing
+                kanallarini tanlash
               </div>
             </div>
 
@@ -536,7 +540,8 @@ export default function Home() {
                 </svg>
               </div>
               <div className="feature-text">
-              Yangi mijozlarni jalb qilish: Ularni o‘ziga jalb qiluvchi reklama texnikalari va brend yaratish usullari ko’rib chiqamiz
+                Yangi mijozlarni jalb qilish: Ularni o‘ziga jalb qiluvchi
+                reklama texnikalari va brend yaratish usullari ko’rib chiqamiz
               </div>
             </div>
           </div>
@@ -544,7 +549,7 @@ export default function Home() {
 
         {/* Bottom Registration Button */}
         <div className="registration-area bottom">
-          <button className="register-button" onClick={showRegistrationForm}>
+          <button className="register-button-2" onClick={showRegistrationForm}>
             RO'YXATDAN O'TISH
           </button>
           <div className="free-label">
@@ -613,7 +618,7 @@ export default function Home() {
                             >
                               {countries.map((country) => (
                                 <option key={country.code} value={country.code}>
-                                  ({country.phoneCode}) {country.name}
+                                  ({country.phoneCode})
                                 </option>
                               ))}
                             </select>

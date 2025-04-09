@@ -11,8 +11,7 @@ export default function ThankYou() {
         <div className="thank-you-content">
           <h1 className="thank-you-title">Oxirgi qadam qoldi!</h1>
           <p className="thank-you-description">
-            Jonli efirda qatnashish uchun quyidagi tugmani
-            <br /> bosib yopiq kanalga obuna bo'ling!
+            Jonli efirda qatnashish uchun quyidagi tugmani bosib yopiq kanalga obuna bo'ling!
           </p>
           <Image
             src={STERLKA}

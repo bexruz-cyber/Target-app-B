@@ -9,7 +9,7 @@
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 0;
 }
 
 body {
@@ -67,6 +67,8 @@ body {
 }
 
 .thank-you-title {
+    color: #000000;
+  text-align: center;
   font-weight: 700;
   font-size: 50px;
   margin-bottom: 20px;
@@ -83,27 +85,26 @@ body {
   background-position: center center;
   border-color: transparent;
   border-style: solid;
+  margin-bottom: 30px;
 }
-
 
 @media screen and (max-width: 768px) {
-    .thank-you-title{
-        font-size: 30px;
-    }
-    .thank-you-description{
-        font-size: 16px;
-    }
-    .tn-atom{
-        font-size: 16px;
-        width: 250px;
-    }
-    .thank-you-content{
-        width: 100%;
-        height: auto;
-        padding: 20px;
-    }
+  .thank-you-title {
+    font-size: 30px;
+  }
+  .thank-you-description {
+    font-size: 16px;
+  }
+  .tn-atom {
+    font-size: 16px;
+    width: 250px;
+  }
+  .thank-you-content {
+    width: 100%;
+    height: auto;
+    padding: 50px 10px;
+  }
 }
-
 
 .footer {
   padding: 20px 0;

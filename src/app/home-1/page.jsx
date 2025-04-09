@@ -1,11 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import "@/app/style/home.css";
+import "../style/home.css";
 import { useEffect, useState, useRef } from "react";
 import MainDavronbek from "../../../public/img/main-davronbek.png";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   const [selectedCountry, setSelectedCountry] = useState("UZ");
   const [loading, setLoading] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -335,6 +337,7 @@ export default function Home() {
 
       // In a real app, you might redirect to a thank-you page
       // window.location.href = "./thank-you/index.html";
+      router.push("/thank-you");
     } catch (error) {
       setError(
         "❌ Ma'lumotlarni yuborishda xatolik yuz berdi. Iltimos, qayta urinib ko'ring."
@@ -409,8 +412,8 @@ export default function Home() {
               <Image
                 src={MainDavronbek}
                 alt="Dostonjon Soyibov"
-                width={341}
-                height={358}
+                width={321}
+                height={338}
                 className="first-main-img"
                 priority={true}
               />
@@ -564,7 +567,7 @@ export default function Home() {
                                 value={country.code}
                                 data-maxlength={country.maxLength}
                               >
-                                ({country.phoneCode}) {country.name}
+                                ({country.phoneCode})
                               </option>
                             ))}
                           </select>
