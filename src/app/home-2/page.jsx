@@ -536,7 +536,7 @@ export default function Home() {
         </div>
 
         {/* Bottom Registration Button */}
-        <div className="registration-area bottom">
+        <div className="registration-area bottom" style={{marginBottom:"20px"}}>
           <button className="register-button" onClick={showRegistrationForm}>
             RO'YXATDAN O'TISH
           </button>

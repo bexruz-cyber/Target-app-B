@@ -438,7 +438,7 @@ export default function Home() {
         </div>
 
         {/* Features Section */}
-        <div className="features-section">
+        <div className="features-section" style={{ marginBottom: "30px" }}>
           <div className="features-list">
             <h2 className="features-title">Masterklassda siz:</h2>
             <div className="feature-item">

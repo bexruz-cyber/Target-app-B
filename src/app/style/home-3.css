@@ -54,6 +54,7 @@
   .main-content {
     max-width: 600px;
     margin: 0 auto;
+    margin-bottom: 20px;
     /* padding: 0 10px; */
   }
 
@@ -85,7 +86,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: center;
   }
@@ -141,7 +142,7 @@
 }
 
 .register-button-2 {
-    margin-top: -20px;
+    /* margin-top: -10px; */
     width: 100%;
     max-width: 350px;
     background: linear-gradient(93.05deg, #DDB47B 1%, #F7E2BA 49.29%, #DDB47B 97.58%);
@@ -176,7 +177,7 @@
   /* Features Section */
   .features-section {
     padding: 0 10px;
-    margin: 50px 0;
+    margin: 30px 0;
   }
 
   .features-title {
