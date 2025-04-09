@@ -12,6 +12,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const metadata: Metadata = {
+  title: "18-Aprel | Biznes Masterklassi",
+  description: "18-Aprel | Biznes Masterklassi",
+};
 
 export default function RootLayout({
   children,
