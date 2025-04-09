@@ -1,0 +1,803 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+body {
+  background-color: #0a0a0a;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Add this to your existing CSS file */
+
+/* Desktop Responsive Styles */
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    max-width: 1200px;
+    padding: 20px 40px;
+  }
+
+  /* Header Layout */
+  .text {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Desktop Header */
+  .main-text {
+    max-width: 500px;
+    margin: 30px auto;
+  }
+
+  .main-text-span2 {
+    font-size: 22px;
+  }
+
+  .main-text-p {
+    font-size: 18px;
+    margin: 25px 0;
+  }
+
+  /* Desktop Main Heading */
+  .main-text-h1 h1 {
+    font-size: 36px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.4;
+  }
+
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 50px auto;
+    gap: 40px;
+  }
+
+  .hero-left {
+    flex: 1;
+    order: 1;
+  }
+
+  .hero-right {
+    flex: 1;
+    order: 2;
+  }
+
+  /* Speaker Image Styling */
+  .mobile-img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    justify-content: flex-end;
+  }
+
+  .mobile-img .first-main-img {
+    max-width: 400px;
+    height: auto;
+  }
+
+  .mobile-img_after {
+    font-size: 16px;
+    width: 240px;
+    bottom: 160px;
+    right: -20%;
+  }
+
+  /* Desktop Registration Button */
+  .show-button {
+    font-size: 20px;
+    padding: 20px 0;
+    max-width: 400px;
+  }
+
+  .mobile-text-p {
+    font-size: 32px;
+    margin: 15px auto;
+  }
+
+  /* Desktop Timer Section */
+  .countdown-section {
+    max-width: 500px;
+    padding: 20px;
+    margin: 40px auto;
+  }
+
+  .countdown-title {
+    font-size: 20px;
+  }
+
+  .countdown-time {
+    font-size: 48px;
+  }
+
+  /* Desktop Features Section */
+  .features-title {
+    font-size: 30px;
+    margin: 60px 0 30px;
+  }
+
+  .features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  .feature-item {
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 10px 0;
+    padding: 25px 15px 25px 60px;
+    height: 100%;
+    max-width: none;
+  }
+
+  .feature-item:before {
+    left: 20px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .feature-text {
+    font-size: 18px;
+  }
+
+  /* Desktop Form */
+  .form-container {
+    max-width: 600px;
+    padding: 40px;
+  }
+
+  .form-h1 h1 {
+    font-size: 26px;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  .phone-input,
+  .submit-button {
+    font-size: 18px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 50px 0;
+  }
+
+  .footer-text {
+    max-width: 800px;
+  }
+}
+
+/* Typography */
+h1 {
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  line-height: 1.3;
+  font-size: 26px;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+/* Header Date Styling */
+.main-text {
+  background-color: #0a0a0a;
+  border: 2px solid #b30000;
+  border-radius: 30px;
+  padding: 14px 20px;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 85%;
+}
+
+.main-text-span2 {
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  display: block;
+}
+
+/* Small info text */
+.main-text-p {
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  margin: 15px 0;
+  opacity: 0.8;
+}
+
+/* Main Heading */
+.main-text-h1 {
+  margin: 25px 0;
+}
+
+.main-text-h1 h1 {
+  font-size: 24px;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  padding: 0 15px;
+}
+
+/* Speaker Image */
+.mobile-img {
+  background-image: url("../../../public/main_img_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  position: relative;
+}
+
+.mobile-img .first-main-img {
+  width: 100%;
+  max-width: 321px;
+  border-radius: 15px;
+}
+
+/* Speaker Name Tag */
+.mobile-img_after {
+  width: 210px;
+  position: absolute;
+  bottom: 120px;
+  right: -25%;
+  transform: translateX(-50%);
+  /* background-color: rgba(0,0,0,0.7); */
+  backdrop-filter: blur(117.5999984741211px);
+  color: #fff;
+  padding: 11px 21px;
+  /* border-radius: 20px; */
+  font-size: 14px;
+  font-weight: 600;
+  clip-path: polygon(16% 0, 100% 0, 85% 100%, 0% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 15px;
+}
+
+/* Registration Button */
+.show-button,
+.img-button {
+  background-color: #b30000;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  padding: 28px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 85%;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.show-button:hover,
+.img-button:hover {
+  background-color: #d40000;
+}
+
+/* Free Tag with Arrow */
+.mobile-text-p {
+  display: flex;
+  justify-content: center;
+  max-width: 300px;
+  font-weight: 800;
+  font-size: 28px;
+  margin: 25px auto;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+/* Arrow indicator */
+.mobile-text-p:after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url("../../../public/img/arrow.png");
+  rotate: 180deg;
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 10%;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+/* Timer Section */
+.countdown-section {
+  border: 1px solid #5c5c5c;
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 30px auto;
+  text-align: center;
+  max-width: 85%;
+}
+
+.countdown-title {
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.countdown-time {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+/* Features List Section */
+.features-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 40px 0 25px;
+}
+
+.feature-item {
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  padding: 20px 15px 20px 50px;
+  margin: 15px auto;
+  max-width: 85%;
+  position: relative;
+}
+
+.feature-item:before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.feature-text {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Free tag with arrow at bottom */
+.free-tag {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  margin: 40px 0 10px;
+  position: relative;
+}
+
+.free-tag:before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+/* Form Styling */
+/* Add these styles to your home.css file */
+
+/* Form styling improvements */
+.form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  background-color: #1a1a1a;
+  max-width: 90%;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.f-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1001;
+  color: white;
+  transition: transform 0.2s;
+}
+
+.f-button:hover {
+  transform: scale(1.2);
+}
+
+.form-h1 h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+#form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #444;
+}
+
+#form input[type="text"],
+#form input[type="tel"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 0;
+  /* border: 1px solid #ddd; */
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+#form input[type="text"]:focus,
+#form input[type="tel"]:focus,
+#form select:focus {
+  border-color: #ff5722;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 87, 34, 0.2);
+}
+
+.error-input {
+  border-color: #ff0000 !important;
+  background-color: rgba(255, 0, 0, 0.05);
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.flag-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-right: 8px; */
+  width: 40px;
+  height: 28px;
+  /* border: 1px solid #ddd; */
+  border-radius: 5px;
+  overflow: hidden;
+  /* background-color: #f9f9f9;  */
+}
+
+.flag-img {
+  object-fit: cover;
+  width: 24px;
+  height: 18px;
+}
+
+#country {
+  flex: 1;
+  max-width: 170px;
+  padding: 12px;
+  padding-left: 0;
+  margin-right: 8px;
+  /* border: 1px solid #ddd; */
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  /* background-color: white; */
+  transition: border-color 0.3s;
+}
+
+.close-button{
+    background: none;
+    border: none;
+    /* font-size: 20px; */
+    cursor: pointer;
+    z-index: 1001;
+    color: white;
+}
+
+#phone {
+  flex: 1;
+  padding: 12px;
+  /* border: 1px solid #ddd; */
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.warning-p,
+.name-error {
+  color: #ff0000;
+  margin-bottom: 15px;
+  display: none;
+  font-size: 14px;
+}
+
+.warning-p.visible,
+.name-error {
+  display: block;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 14px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.submit-button:hover {
+  background-color: #e64a19;
+}
+
+.submit-button:active {
+  transform: scale(0.98);
+}
+
+.show-form-div {
+  text-align: center;
+  padding: 20px;
+}
+
+.dots:after {
+  content: ".";
+  animation: dots 1.5s steps(5, end) infinite;
+}
+
+.form-h1 h1 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #fff;
+}
+
+input[type="text"],
+input[type="tel"] {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #2a2a2a;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  /* border: 1px solid #333; */
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #2a2a2a;
+  margin-bottom: 20px;
+}
+
+.phone-input img {
+  width: 24px;
+  height: 18px;
+  margin: 0 10px;
+}
+
+.phone-input select {
+  border: none;
+  background-color: #2a2a2a;
+  color: #fff;
+  padding: 14px 5px;
+  font-size: 16px;
+}
+
+.phone-input input {
+  border: none;
+  background-color: transparent;
+  padding: 14px;
+  flex: 1;
+  font-size: 16px;
+  color: #fff;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 16px 0;
+  background-color: #b30000;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.warning-p {
+  display: none;
+  color: #ff6b6b;
+  font-size: 14px;
+  margin: -15px 0 15px;
+}
+
+.show-form-div {
+  display: none;
+  text-align: center;
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+  background-color: #0a0a0a;
+  padding: 30px 0;
+  margin-top: 60px;
+  border-top: 1px solid #333;
+}
+
+.footer-text {
+  text-align: center;
+  max-width: 85%;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.D-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer-text button {
+  background: none;
+  border: 1px solid #b30000;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.footer-text ul {
+  list-style: none;
+  margin: 25px 0;
+}
+
+.footer-text ul li {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 15px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.footer-text p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+}
+
+/* Additional HTML Elements to add */
+/* You'll need to add these elements to your HTML */
+/*
+<div class="countdown-section">
+    <div class="countdown-title">Ro'yxatdan o'tish uchun qolgan vaqt:</div>
+    <div class="countdown-time">02:00</div>
+</div>
+
+<h2 class="features-title">Masterklassda siz:</h2>
+
+<div class="feature-item">
+    <div class="feature-text">Yangi mijozlarni topish uchun o'ziga xos usullarni</div>
+</div>
+
+<div class="feature-item">
+    <div class="feature-text">Sotuvni 5X oshirish bo'yicha kerakli strategiyalarni</div>
+</div>
+
+<div class="feature-item">
+    <div class="feature-text">Raqobatchilardan ajralib turish va kuchli pozitsiyani egallash bo'yicha strategiyalarni ko'rib chiqamiz</div>
+</div>
+
+<div class="free-tag">BEPUL</div>
+*/
+
+
+.footer {
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    background-color: #000000;
+    color: #ffffff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-title {
+    vertical-align: middle;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: "Montserrat", Arial, sans-serif;
+    line-height: 1.4;
+    font-weight: 500;
+    background-position: center center;
+    border-color: transparent;
+    border-style: solid;
+    margin-bottom: 20pxfooter;
+  }
+
+  .footer-disclaimer,
+  .footer-rights {
+    vertical-align: middle;
+    color: #ffffff;
+    font-size: 12px;
+    font-family: "Montserrat", Arial, sans-serif;
+    line-height: 1.4;
+    font-weight: 400;
+    background-position: center center;
+    border-color: transparent;
+    border-style: solid;
+  }
+
+  .footer-content {
+    max-width: 500px;
+    text-align: center;
+  }

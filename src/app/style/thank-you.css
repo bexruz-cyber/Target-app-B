@@ -1,0 +1,148 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+body {
+  background-color: #f0f0f0;
+  line-height: 1.6;
+  color: #000000;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../public/img/thank-you-bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.tn-atom {
+  color: #ffffff;
+  font-size: 20px;
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 600;
+  border-radius: 50px 50px 50px 50px;
+  background-color: #29b6f6;
+  background-position: center center;
+  border-color: transparent;
+  border-style: solid;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
+  box-shadow: 0px 5px 0px 0px rgba(16, 88, 121, 1);
+  padding: 10px 20px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.thank-you-content {
+  width: 956px;
+  height: 498px;
+  border-radius: 50px 50px 50px 50px;
+  background-color: #ffffff;
+  background-position: center center;
+  border-color: transparent;
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.thank-you-title {
+  font-weight: 700;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.thank-you-description {
+  text-align: center;
+  vertical-align: middle;
+  color: #000000;
+  font-size: 20px;
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 400;
+  background-position: center center;
+  border-color: transparent;
+  border-style: solid;
+}
+
+
+@media screen and (max-width: 768px) {
+    .thank-you-title{
+        font-size: 30px;
+    }
+    .thank-you-description{
+        font-size: 16px;
+    }
+    .tn-atom{
+        font-size: 16px;
+        width: 250px;
+    }
+    .thank-you-content{
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+}
+
+
+.footer {
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  background-color: #000000;
+  color: #ffffff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-title {
+  vertical-align: middle;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 1.4;
+  font-weight: 500;
+  background-position: center center;
+  border-color: transparent;
+  border-style: solid;
+  margin-bottom: 20pxfooter;
+}
+
+.footer-disclaimer,
+.footer-rights {
+  vertical-align: middle;
+  color: #ffffff;
+  font-size: 12px;
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 1.4;
+  font-weight: 400;
+  background-position: center center;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.footer-content {
+  max-width: 500px;
+  text-align: center;
+}
