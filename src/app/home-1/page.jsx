@@ -399,8 +399,7 @@ export default function Home() {
         {/* Main Heading */}
         <div className="main-text-h1">
           <h1>
-            Qanday qilib tog'ri biznes yo'nalish tanlab 5 barobar tezroq foydaga
-            chiqish mumkin
+          Qanday qilib 5 kun ichida hech qanday mahsulotsiz, pulsiz 0 dan biznes boshladim va real daromadga chiqdim — qadam-baqadam haqiqiy jarayonim bilan bo'lishaman.
           </h1>
         </div>
 
@@ -416,6 +415,7 @@ export default function Home() {
                 height={338}
                 className="first-main-img"
                 priority={true}
+                quality={60}
               />
               <div className="mobile-img_after">
                 Dostonjon Soyibov

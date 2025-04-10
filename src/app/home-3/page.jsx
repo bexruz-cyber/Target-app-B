@@ -377,9 +377,7 @@ export default function Home() {
           </p>
 
           <h1 className="main-heading">
-            O’zingizga mos bizness yo’nalish tanlash orqali biznessingizni
-            rivojlantirib, bankrot bo’lmasdan daromadingizni 5x ga oshirish
-            mumkin
+          Sizda ham mahsulot, reklama yoki katta mablag‘ bo‘lmasligi mumkin. Ammo men shunday sharoitda qanday qilib 5 kunda daromadga chiqdim — har bir qadamni ochiq ko‘rsataman.
           </h1>
 
           {/* Hero Section */}

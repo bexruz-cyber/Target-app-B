@@ -410,8 +410,7 @@ export default function Home() {
         </p>
 
         <h1 className="main-heading">
-          Qanday qilib boshlagan biznesingizni tog'ri rivojlantirib,
-          sotuvlaringiz pastligidan butunlay halos bo'lish mumkin
+        Boshida hech qanday tayyorgarlik yo‘q edi. Ammo 5 kun ichida biznes boshladim, real mijoz topdim va pul ishladim. Siz ham eplay oladigan biznes rejani — qadam-baqadam yo‘l xaritasi bilan bo’lishaman.
         </h1>
 
         {/* Hero Section */}

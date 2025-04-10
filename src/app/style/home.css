@@ -58,7 +58,7 @@ body {
     font-size: 36px;
     max-width: 800px;
     margin: 0 auto;
-    line-height: 1.4;
+    /* line-height: 1.5; */
   }
 
   .hero-section {
@@ -245,7 +245,7 @@ p {
 
 /* Speaker Image */
 .mobile-img {
-  background-image: url("../../../public/main_img_bg.png");
+  background-image: url("../../../public/main_img_bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
