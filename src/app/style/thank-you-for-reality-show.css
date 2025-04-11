@@ -27,7 +27,7 @@ body::before {
 
 .container {
   max-width: 800px;
-  height: 100vh;
+  /* height: 100vh; */
   margin: 0 auto;
   padding: 20px;
   display: flex;
@@ -82,7 +82,7 @@ body::before {
 
 .reality-show-main-title {
   margin-top: 14px;
-  font-size: 38px;
+  font-size: 33px;
   font-weight: bold;
   text-align: center;
 }
@@ -265,7 +265,7 @@ body::before {
 }
 
 .reality-show-descr {
-  margin-top: 90px;
+  margin-top: 30px;
   color: #ffffff;
   font-size: 10px;
   line-height: 1.55;
