@@ -10,7 +10,7 @@ export function ModalButton() {
   return (
     <>
       <button onClick={() => setIsModalOpen(true)} className="homeCenterBtn">
-        Bepul tomosha qiling
+      RO'YXATDAN O'TISH
       </button>
 
       <FormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
