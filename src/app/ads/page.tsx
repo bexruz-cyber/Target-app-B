@@ -37,7 +37,7 @@ export default function Home() {
             </p>
             <p className="homeCenterText_md">
               Reality-Show Dostonjon Soyibov bilan
-              <span className="homeCenterTopTextInfo">i</span>
+              {/* <span className="homeCenterTopTextInfo">i</span>   */}
             </p>
           </div>
           <p className="homeCenterText">
