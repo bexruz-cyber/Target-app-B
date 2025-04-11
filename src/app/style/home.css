@@ -76,6 +76,7 @@ body {
   }
 
   .hero-right {
+    z-index: 9;
     flex: 1;
     order: 2;
   }
@@ -108,6 +109,9 @@ body {
   }
 
   .mobile-text-p {
+    display: flex;
+    /* margin-top: -90px; */
+    inline-size: 99;
     font-size: 32px;
     margin: 15px auto;
   }
@@ -236,7 +240,7 @@ p {
 }
 
 .main-text-h1 h1 {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 900;
   color: #fff;
   text-align: center;
@@ -250,7 +254,7 @@ p {
   background-size: cover;
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  /* margin: 20px 0; */
   position: relative;
 }
 
@@ -282,7 +286,6 @@ p {
   border-radius: 15px;
 }
 
-
 /* Registration Button */
 .show-button,
 .img-button {
@@ -299,7 +302,8 @@ p {
   letter-spacing: 1px;
   width: 85%;
   display: block;
-  margin: 20px auto;
+  margin: 0px auto;
+  /* margin-top: -50px; */
   text-align: center;
   box-shadow: 0 8px #8b0000; /* Creates the 3D effect */
 }

@@ -460,9 +460,11 @@ export default function Home() {
           </div>
 
           <div className="hero-left">
-            {/* Registration Button */}
             <div className="mobile-text">
-              <button className="show-button" onClick={showRegistrationForm}>
+              <button
+                className="show-button"
+                onClick={showRegistrationForm}
+              >
                 RO'YXATDAN O'TISH
               </button>
               <p className="mobile-text-p">BEPUL</p>
@@ -649,10 +651,10 @@ export default function Home() {
             , 260а-uy
             <br />
             <br />
-             This site or product is not part of or endorsed by
-            Facebook, Google, or any social media platform in any way FACEBOOK
-            is a trademark of META PLATFORMS, Inc. YOUTUBE and GOOGLE are
-            trademarks of ALPHABET, Inc.
+            This site or product is not part of or endorsed by Facebook, Google,
+            or any social media platform in any way FACEBOOK is a trademark of
+            META PLATFORMS, Inc. YOUTUBE and GOOGLE are trademarks of ALPHABET,
+            Inc.
           </p>
           <p className="footer-rights">Barcha huquqlar himoyalangan, 2025.</p>
         </div>
