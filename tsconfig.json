@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/page.jsx", "src/app/home-1/page.jsx", "src/app/reality-show/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/page.jsx", "src/app/home-1/page.jsx", "src/app/reality-show/page.jsx", "src/app/components/FacebookPixel.jsx"],
   "exclude": ["node_modules"]
 }

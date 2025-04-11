@@ -5,6 +5,7 @@ import "../style/home.css";
 import { useEffect, useState, useRef } from "react";
 import MainDavronbek from "../../../public/img/main-davronbek.png";
 import { useRouter } from "next/navigation";
+import { GOOGLE_SHEETS_TOKEN } from "../constants/sheets";
 
 export default function Home() {
   const router = useRouter();
@@ -313,30 +314,33 @@ export default function Home() {
     setLoading(true);
 
     try {
-      // Google Sheets script URL
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbwB40n-KSXKKD3PjmPcJNrOgruMP-4OU11NSJO_JBeaETmRMLsPgDJpylrWguq6H7oN/exec";
+      const scriptURL = GOOGLE_SHEETS_TOKEN;
 
-      // Send data to Google Sheets
-      await fetch(scriptURL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: formData.name,
-          phone: `${formData.countryCode} ${formData.phone}`,
-          date: new Date().toISOString(),
-        }),
-        mode: "no-cors", // Important for cross-origin requests to Google Scripts
+      const now = new Date();
+      const formattedDate = now.toLocaleString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
       });
 
-      // Set form as submitted
+      const formBody = new URLSearchParams();
+      formBody.append("Name", formData.name);
+      formBody.append(
+        "Phone number",
+        `${formData.countryCode} ${formData.phone}`
+      );
+      formBody.append("Date", formattedDate);
+
+      await fetch(scriptURL, {
+        method: "POST",
+        body: formBody,
+        mode: "no-cors",
+      });
+
       setFormSubmitted(true);
-
-      // Store reload flag in session storage
       sessionStorage.setItem("reloadAfterThankYou", "true");
-
-      // In a real app, you might redirect to a thank-you page
-      // window.location.href = "./thank-you/index.html";
       router.push("/thank-you");
     } catch (error) {
       setError(
@@ -387,7 +391,7 @@ export default function Home() {
         {/* Date Header */}
         <div className="main-text-center container">
           <div className="main-text">
-            <span className="main-text-span2">18-Aprel | Soat 21:00 da</span>
+            <span className="main-text-span2">20-Aprel | Soat 20:00 da</span>
           </div>
         </div>
 
@@ -399,7 +403,9 @@ export default function Home() {
         {/* Main Heading */}
         <div className="main-text-h1">
           <h1>
-          Qanday qilib 5 kun ichida hech qanday mahsulotsiz, pulsiz 0 dan biznes boshladim va real daromadga chiqdim — qadam-baqadam haqiqiy jarayonim bilan bo'lishaman.
+            Qanday qilib 5 kun ichida hech qanday mahsulotsiz, pulsiz 0 dan
+            biznes boshladim va real daromadga chiqdim — qadam-baqadam haqiqiy
+            jarayonim bilan bo'lishaman.
           </h1>
         </div>
 
@@ -638,10 +644,15 @@ export default function Home() {
         <div className="footer-content">
           <h2 className="footer-title">Dostonjon Soyibov</h2>
           <p className="footer-disclaimer">
-            This site or product is not part of or endorsed by Facebook, Google,
-            or any social media platform in any way FACEBOOK is a trademark of
-            META PLATFORMS, Inc. YOUTUBE and GOOGLE are trademarks of ALPHABET,
-            Inc.
+            "IT BUYUK ZAMON SARI" MCHJ H/r:20208000007161231001 MFO 01183 INN
+            311693446 Toshkent sh. Yunusobod t. Posira MFY, Bog‘ishamol ko'chasi
+            , 260а-uy
+            <br />
+            <br />
+             This site or product is not part of or endorsed by
+            Facebook, Google, or any social media platform in any way FACEBOOK
+            is a trademark of META PLATFORMS, Inc. YOUTUBE and GOOGLE are
+            trademarks of ALPHABET, Inc.
           </p>
           <p className="footer-rights">Barcha huquqlar himoyalangan, 2025.</p>
         </div>

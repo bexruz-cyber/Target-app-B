@@ -6,6 +6,7 @@ import MainDostonjon from "../../../public/img/main-davronbek.png"; // Updated i
 import arrow from "../../../public/img/arrow.png"; // Ensure this path is correct
 import "../style/home-2.css"; // Ensure this path is correct
 import { useRouter } from "next/navigation";
+import { GOOGLE_SHEETS_TOKEN } from "../constants/sheets";
 
 export default function Home() {
   const router = useRouter();
@@ -306,17 +307,28 @@ export default function Home() {
     setLoading(true);
 
     try {
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbwB40n-KSXKKD3PjmPcJNrOgruMP-4OU11NSJO_JBeaETmRMLsPgDJpylrWguq6H7oN/exec";
+      const scriptURL = GOOGLE_SHEETS_TOKEN;
+
+      const now = new Date();
+      const formattedDate = now.toLocaleString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+
+      const formBody = new URLSearchParams();
+      formBody.append("Name", formData.name);
+      formBody.append(
+        "Phone number",
+        `${formData.countryCode} ${formData.phone}`
+      );
+      formBody.append("Date", formattedDate);
 
       await fetch(scriptURL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: formData.name,
-          phone: `${formData.countryCode} ${formData.phone}`,
-          date: new Date().toISOString(),
-        }),
+        body: formBody,
         mode: "no-cors",
       });
 
@@ -400,7 +412,7 @@ export default function Home() {
                 />
               </defs>
             </svg>
-            18-Aprel | Soat 21:00 da
+            20-Aprel | Soat 20:00 da
           </div>
         </div>
       </div>
@@ -410,7 +422,9 @@ export default function Home() {
         </p>
 
         <h1 className="main-heading">
-        Boshida hech qanday tayyorgarlik yo‘q edi. Ammo 5 kun ichida biznes boshladim, real mijoz topdim va pul ishladim. Siz ham eplay oladigan biznes rejani — qadam-baqadam yo‘l xaritasi bilan bo’lishaman.
+          Boshida hech qanday tayyorgarlik yo‘q edi. Ammo 5 kun ichida biznes
+          boshladim, real mijoz topdim va pul ishladim. Siz ham eplay oladigan
+          biznes rejani — qadam-baqadam yo‘l xaritasi bilan bo’lishaman.
         </h1>
 
         {/* Hero Section */}
@@ -535,7 +549,10 @@ export default function Home() {
         </div>
 
         {/* Bottom Registration Button */}
-        <div className="registration-area bottom" style={{marginBottom:"20px"}}>
+        <div
+          className="registration-area bottom"
+          style={{ marginBottom: "20px" }}
+        >
           <button className="register-button" onClick={showRegistrationForm}>
             RO'YXATDAN O'TISH
           </button>
@@ -665,6 +682,11 @@ export default function Home() {
         <div className="footer-content">
           <h2 className="footer-title">Dostonjon Soyibov</h2>
           <p className="footer-disclaimer">
+            "IT BUYUK ZAMON SARI" MCHJ H/r:20208000007161231001 MFO 01183 INN
+            311693446 Toshkent sh. Yunusobod t. Posira MFY, Bog‘ishamol ko'chasi
+            , 260а-uy
+            <br />
+            <br />
             This site or product is not part of or endorsed by Facebook, Google,
             or any social media platform in any way FACEBOOK is a trademark of
             META PLATFORMS, Inc. YOUTUBE and GOOGLE are trademarks of ALPHABET,

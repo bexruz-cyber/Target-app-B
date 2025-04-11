@@ -23,7 +23,7 @@ export default function ThankYou() {
 
           <a
             className="tn-atom subscribe-button"
-            href="https://t.me/+B_sUpK5EZrcyY2Ji"
+            href="https://t.me/dostonjonsoyibov"
           >
             OBUNA BO'LISH
             <Image

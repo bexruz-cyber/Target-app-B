@@ -6,6 +6,7 @@ import MainDostonjon from "../../../public/img/main-davronbek-2.png"; // Updated
 import arrow from "../../../public/img/arrow.png"; // Ensure this path is correct
 import "../style/home-3.css"; // Ensure this path is correct
 import { useRouter } from "next/navigation";
+import { GOOGLE_SHEETS_TOKEN } from "../constants/sheets";
 
 export default function Home() {
   const router = useRouter();
@@ -306,8 +307,7 @@ export default function Home() {
     setLoading(true);
 
     try {
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbwB40n-KSXKKD3PjmPcJNrOgruMP-4OU11NSJO_JBeaETmRMLsPgDJpylrWguq6H7oN/exec";
+        const scriptURL = GOOGLE_SHEETS_TOKEN;
 
       await fetch(scriptURL, {
         method: "POST",

@@ -10,6 +10,7 @@ import main_4 from "../../../public/img/main/main_4.png";
 import arrow from "../../../public/img/main/arrow.svg";
 import arrow_2 from "../../../public/img/arrow.png"; // Ensure this path is correct
 import { useRouter } from "next/navigation";
+import { GOOGLE_SHEETS_TOKEN } from "../constants/sheets";
 
 export default function RealityShowPromo() {
   const router = useRouter();
@@ -318,31 +319,34 @@ export default function RealityShowPromo() {
     setLoading(true);
 
     try {
-      // Google Sheets script URL
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbwB40n-KSXKKD3PjmPcJNrOgruMP-4OU11NSJO_JBeaETmRMLsPgDJpylrWguq6H7oN/exec";
+      const scriptURL = GOOGLE_SHEETS_TOKEN;
 
-      // Send data to Google Sheets
-      await fetch(scriptURL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: formData.name,
-          phone: `${formData.countryCode} ${formData.phone}`,
-          date: new Date().toISOString(),
-        }),
-        mode: "no-cors", // Important for cross-origin requests to Google Scripts
+      const now = new Date();
+      const formattedDate = now.toLocaleString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
       });
 
-      // Set form as submitted
+      const formBody = new URLSearchParams();
+      formBody.append("Name", formData.name);
+      formBody.append(
+        "Phone number",
+        `${formData.countryCode} ${formData.phone}`
+      );
+      formBody.append("Date", formattedDate);
+
+      await fetch(scriptURL, {
+        method: "POST",
+        body: formBody,
+        mode: "no-cors",
+      });
+
       setFormSubmitted(true);
-
-      // Store reload flag in session storage
       sessionStorage.setItem("reloadAfterThankYou", "true");
-
-      // In a real app, you might redirect to a thank-you page
-      // window.location.href = "./thank-you/index.html";
-      router.push("/thank-you");
+      router.push("/thank-you-for-reality-show");
     } catch (error) {
       setError(
         "❌ Ma'lumotlarni yuborishda xatolik yuz berdi. Iltimos, qayta urinib ko'ring."
@@ -397,7 +401,7 @@ export default function RealityShowPromo() {
           </div>
           <div className="reality-show-subtitle-container">
             <h2 className="reality-show-subtitle">
-              Reality - show Dostonjon Sobiovdan
+              Reality - show Dostonjon Soyibovdan
             </h2>
           </div>
         </header>
@@ -633,10 +637,15 @@ export default function RealityShowPromo() {
         <div className="footer-content">
           <h2 className="footer-title">Dostonjon Soyibov</h2>
           <p className="footer-disclaimer">
-            This site or product is not part of or endorsed by Facebook, Google,
-            or any social media platform in any way FACEBOOK is a trademark of
-            META PLATFORMS, Inc. YOUTUBE and GOOGLE are trademarks of ALPHABET,
-            Inc.
+            "IT BUYUK ZAMON SARI" MCHJ H/r:20208000007161231001 MFO 01183 INN
+            311693446 Toshkent sh. Yunusobod t. Posira MFY, Bog‘ishamol ko'chasi
+            , 260а-uy
+            <br />
+            <br />
+             This site or product is not part of or endorsed by
+            Facebook, Google, or any social media platform in any way FACEBOOK
+            is a trademark of META PLATFORMS, Inc. YOUTUBE and GOOGLE are
+            trademarks of ALPHABET, Inc.
           </p>
           <p className="footer-rights">Barcha huquqlar himoyalangan, 2025.</p>
         </div>
