@@ -47,7 +47,7 @@ export function FormModal({ isOpen, onClose }: FormModalProps) {
     formDataToSend.append("Ism va Familya", `${formData.firstName}`)
     formDataToSend.append("Telefon raqam", formData.phone)
     formDataToSend.append("Qoshilgan vaqti", formatDate(new Date()))
-    router.push("/ads-thak-you")
+    router.push("/thank-you")
     try {
       await axios.post(
         "https://script.google.com/macros/s/AKfycbzmBH02lYkrgLlbTDQz-1ApbnZvO9c__pt9COaaoeL9k0r2GXEqygm5kG6Ly4Bs8pQ0/exec",

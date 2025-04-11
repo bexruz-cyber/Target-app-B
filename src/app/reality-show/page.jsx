@@ -346,7 +346,7 @@ export default function RealityShowPromo() {
 
       setFormSubmitted(true);
       sessionStorage.setItem("reloadAfterThankYou", "true");
-      router.push("/thank-you-for-reality-show");
+      router.push("/thank-you");
     } catch (error) {
       setError(
         "❌ Ma'lumotlarni yuborishda xatolik yuz berdi. Iltimos, qayta urinib ko'ring."

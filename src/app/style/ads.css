@@ -197,7 +197,7 @@
   color: white;
   line-height: 20px;
   text-align: center;
-  margin-bottom: 27px;
+  margin-bottom: 5px;
 }
 
 .homeCenterBtn {
@@ -473,7 +473,7 @@
 
   .homeCenterTitle {
     margin-bottom: 0px;
-    font-size: 28px;
+    font-size: 26px;
     line-height: 30px;
     margin-bottom: 5px;
     max-width: none;
@@ -481,7 +481,7 @@
 
   .homeCenterInfoText {
     line-height: 110%;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
   }
 
   .logo {
@@ -565,7 +565,7 @@
   }
 
   .mobileCenterCenter {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
