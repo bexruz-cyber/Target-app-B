@@ -26,7 +26,7 @@ export default function ThankYouPage() {
             <div className="header-right">
               <div className="header-show-info">
                 Reality-Show Dostonjon Soyibov bilan
-                <span className="info-icon">i</span>
+                {/* <span className="info-icon">i</span> */}
               </div>
             </div>
           </div>
