@@ -232,7 +232,7 @@ p {
 
 /* Main Heading */
 .main-text-h1 {
-  margin: 15px 0;
+  /* margin: 15px 0; */
 }
 
 .main-text-h1 h1 {
@@ -282,31 +282,32 @@ p {
   border-radius: 15px;
 }
 
+
 /* Registration Button */
 .show-button,
 .img-button {
-    background-color: #b30000;
-    color: white;
-    font-weight: 700;
-    font-size: 18px;
-    border: none;
-    border-radius: 30px;
-    padding: 28px 0;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    width: 85%;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    box-shadow: 0 8px #8b0000; /* Creates the 3D effect */
+  background-color: #b30000;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  padding: 28px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 85%;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  box-shadow: 0 8px #8b0000; /* Creates the 3D effect */
 }
 
 .show-button:active,
 .img-button:active {
-    box-shadow: 0 4px #8b0000; /* Reduces shadow on click */
-    transform: translateY(4px); /* Moves button down slightly */
+  box-shadow: 0 4px #8b0000; /* Reduces shadow on click */
+  transform: translateY(4px); /* Moves button down slightly */
 }
 
 .show-button:hover,
@@ -540,13 +541,13 @@ p {
   transition: border-color 0.3s;
 }
 
-.close-button{
-    background: none;
-    border: none;
-    /* font-size: 20px; */
-    cursor: pointer;
-    z-index: 1001;
-    color: white;
+.close-button {
+  background: none;
+  border: none;
+  /* font-size: 20px; */
+  cursor: pointer;
+  z-index: 1001;
+  color: white;
 }
 
 #phone {
@@ -767,45 +768,44 @@ input[type="tel"] {
 <div class="free-tag">BEPUL</div>
 */
 
-
 .footer {
-    padding: 20px 0;
-    width: 100%;
-    display: flex;
-    background-color: #000000;
-    color: #ffffff;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  background-color: #000000;
+  color: #ffffff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .footer-title {
-    vertical-align: middle;
-    color: #ffffff;
-    font-size: 20px;
-    font-family: "Montserrat", Arial, sans-serif;
-    line-height: 1.4;
-    font-weight: 500;
-    background-position: center center;
-    border-color: transparent;
-    border-style: solid;
-    margin-bottom: 20pxfooter;
-  }
+.footer-title {
+  vertical-align: middle;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 1.4;
+  font-weight: 500;
+  background-position: center center;
+  border-color: transparent;
+  border-style: solid;
+  margin-bottom: 20pxfooter;
+}
 
-  .footer-disclaimer,
-  .footer-rights {
-    vertical-align: middle;
-    color: #ffffff;
-    font-size: 12px;
-    font-family: "Montserrat", Arial, sans-serif;
-    line-height: 1.4;
-    font-weight: 400;
-    background-position: center center;
-    border-color: transparent;
-    border-style: solid;
-  }
+.footer-disclaimer,
+.footer-rights {
+  vertical-align: middle;
+  color: #ffffff;
+  font-size: 12px;
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 1.4;
+  font-weight: 400;
+  background-position: center center;
+  border-color: transparent;
+  border-style: solid;
+}
 
-  .footer-content {
-    max-width: 500px;
-    text-align: center;
-  }
+.footer-content {
+  max-width: 500px;
+  text-align: center;
+}

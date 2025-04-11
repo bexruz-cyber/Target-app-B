@@ -114,7 +114,7 @@ export default function ThankYouPage() {
           </div>
 
           <a
-            href="https://t.me/dostonjonsoyibov"
+            href="https://t.me/+lFgtcx_PZC1hZDQy"
             target="_blank"
             rel="noopener noreferrer"
             className="subscribe-button"
