@@ -119,7 +119,7 @@
 
 /* Thank You Page Styles */
 .thank-you-page {
-  /* min-height: 100vh; */
+  min-height: 100vh;
   background-color: #111;
   background-image: url('/images/bg.webp');
   background-size: cover;
@@ -128,7 +128,7 @@
   padding: 20px;
   font-family: Arial, sans-serif;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   overflow: hidden;
 }
